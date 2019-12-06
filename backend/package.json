@@ -1,0 +1,14 @@
+{
+  "name": "elk_mean",
+  "version": "1.0.0",
+  "description": "ELK MEAN log uploader web app",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon server.js"
+  },
+  "author": "Robert Poenaru",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
