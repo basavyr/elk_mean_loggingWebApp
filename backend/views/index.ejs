@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ELK Log Uploader</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text">Upload</span>
+        </div>
+        <div class="custom-file">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="SLURMlog" id="file" class="custom-control-input">
+                <label for="file" class="custom-file-label">Select log file...</label>
+                </br>
+                </br>
+                </br>
+                <input type="submit" value="Upload log" class="btn btn-primary btn-amber">
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
