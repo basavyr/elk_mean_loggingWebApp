@@ -1,0 +1,10 @@
+tasks
+
+1.on POST request:
+    send file to mongoDB (mongoose)  -- working (no full info file object)
+    send file to multer local storage --working 
+
+2. on get request:
+    generate list of file info (index, name, last mod)
+    list to JSON from  mongoDB
+    list the mongo content on get '/'

@@ -53,21 +53,7 @@ conn.once("open", () => {
     gfs = Grid(conn.db, mongoose.mongo);
     gfs.collection("elk-logs");
 });
-/* 
-//set storage engine with multer
-// SET STORAGE ON DISK (LOCAL SERVER)
-const diskstorage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, path.join(__dirname + '/uploads/'));
-        // cb(null, '/home/robert.poenaru/PIPELINE/DevWorkspace/NODEJS/elasticServer/');
-    },
-    filename: function(req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
-    }
-});
 
-const diskupload = multer({ storage: diskstorage });
- */
 const uploadFiles = (req, res, next) => {
     diskupload.single("SLURMlog")(req, res, next);
     mongoupload.single("SLURMlog")(req, res, next);
