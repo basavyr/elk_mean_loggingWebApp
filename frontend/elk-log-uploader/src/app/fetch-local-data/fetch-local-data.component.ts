@@ -20,6 +20,7 @@ export class FetchLocalDataComponent implements OnInit {
   }
   toggleDisk() {
     this.show = !this.show;
+    this.getAllFiles();
   }
   getAllFiles() {
     //Get saved list of students

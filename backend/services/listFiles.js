@@ -50,6 +50,7 @@ module.exports = {
                     fileList.push({
                         id: count,
                         FileName: file,
+                        DateAdded: 'December 2019',
                         LastMod: 11,
                         Details: `SLUM log file @DFCTI server`
                     });
@@ -69,7 +70,7 @@ module.exports = {
                     console.log(err);
                     reject(err);
                 } else {
-                    console.log(stats.mtime);
+                    // console.log(stats.mtime);
                     filelist[count].LastMod = stats.mtime;
                     resolve();
                 }

@@ -72,6 +72,9 @@ app.get("/mongo", (req, res) => {
                     dateAdded: Date()
                 });
             });
+            console.log(
+                `Successfully retrieved the info from MongoDB 😊 - @ ${Date()}`
+            );
             return res.send(arr);
         }
     });
@@ -89,6 +92,9 @@ app.get("/disk", async(req, res) => {
             if (err) throw err;
             console.log("Created JSON data...");
         });
+        console.log(
+            `Successfully retrieved the info from local file server 😊 💻 - @ ${Date()}`
+        );
         res.send(fileList);
     } catch (err) {
         console.log(err);
@@ -101,9 +107,14 @@ app.get("/index", (req, res) => {
 });
 
 app.post("/upload", uploadFiles, (req, res) => {
-    console.log({ file: req.file });
+    const dm = {
+        file: req.file,
+        message: `Successfully uploaded file to local file server 😊 💻 - @ ${Date()} `
+    };
+    console.log(dm);
+    // res.send(dm);
     // res.send(req.file);
-    res.redirect("/disk");
+    // res.redirect("/disk");
     // res.send({ file: req.file });
 });
 

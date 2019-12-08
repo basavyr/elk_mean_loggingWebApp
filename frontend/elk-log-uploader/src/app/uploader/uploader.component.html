@@ -1,3 +1,9 @@
-<p>
-  uploader works!
-</p>
+<h1>Upload</h1>
+<div>
+    <form action="http://localhost:8083/upload" method="POST" enctype="multipart/form-data">
+        <div class="file-field input-field">
+            <input type="file" name='SLURMlog'>
+        </div>
+        <div><button type="submit" mat-raised-button color="primary">Upload</button></div>
+    </form>
+</div>
