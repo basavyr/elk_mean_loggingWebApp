@@ -1,7 +1,7 @@
 <div class="container">
     <hr />
-    <p>Fetch the files from MongoDB Atlas server.</p>
-    <button mat-raised-button color="primary" (click)="toggleMongo()">List Files</button>
+    <p>Fetch the files from CentOS local server.</p>
+    <button mat-raised-button color="primary" (click)="toggleDisk()">List Files</button>
     <hr />
     <ng-container *ngIf="show">
         <h3>Log Files</h3>
@@ -10,14 +10,14 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Date Added</th>
+                    <th scope="col">Date Modified</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let item of fileData">
                     <td>{{item.id}}</td>
                     <td>{{item.FileName}}</td>
-                    <td>{{item.dateAdded}}</td>
+                    <td>{{item.lastMod}}</td>
                 </tr>
             </tbody>
         </table>

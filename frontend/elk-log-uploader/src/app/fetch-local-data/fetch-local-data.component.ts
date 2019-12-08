@@ -2,12 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from "./fetch-data.service";
 
 @Component({
-  selector: 'app-fetch-data',
-  templateUrl: './fetch-data.component.html',
-  styleUrls: ['./fetch-data.component.css']
+  selector: 'app-fetch-local-data',
+  templateUrl: './fetch-local-data.component.html',
+  styleUrls: ['./fetch-local-data.component.css']
 })
-export class FetchDataComponent implements OnInit {
-
+export class FetchLocalDataComponent implements OnInit {
   fileData: any;
 
   public show: boolean = false;
@@ -17,14 +16,14 @@ export class FetchDataComponent implements OnInit {
   }
 
   ngOnInit() {
-     this.getAllFiles();
+    this.getAllFiles();
   }
-  toggleMongo() {
+  toggleDisk() {
     this.show = !this.show;
   }
   getAllFiles() {
     //Get saved list of students
-    this.apiService.getMongoList().subscribe(response => {
+    this.apiService.getList().subscribe(response => {
       console.log(response);
       this.fileData = response;
     });
